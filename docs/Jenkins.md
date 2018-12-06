@@ -42,4 +42,6 @@ Once that is done you can give cat with the path name which you have seen in the
   
   And select the neccessary options like whether you want to deploy your application from github or by writing the a script file you can add the code inside the script tag.
   
+  ![Image1](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_069.png?raw=true"Image1")
+  
   Once all this is done you will see the created project as in the below screen.
