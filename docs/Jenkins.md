@@ -34,6 +34,10 @@ Once that is done you can give cat with the path name which you have seen in the
 
   Where you will see below screen without any jobs or pipelines.
   
+  ![Login](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_067.png?raw=true"Login")
   
+  Now you can start creating a free style job 
   
-  Now you can start creating a free style job and add the necessary detials in the 
+  And select the neccessary options like whether you want to deploy your application from github or by writing the a script file you can add the code inside the script tag.
+  
+  Once all this is done you will see the created project as in the below screen.
