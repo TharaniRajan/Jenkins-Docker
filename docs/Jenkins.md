@@ -46,4 +46,6 @@ Once that is done you can give cat with the path name which you have seen in the
   
   ![Image2](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_070.png?raw=true"Image2")
   
+  ![Image3](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_071.png?raw=true"Image3")
+  
   Once all this is done you will see the created project as in the below screen.
