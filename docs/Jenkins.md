@@ -58,4 +58,5 @@ Once that is done you can give cat with the path name which you have seen in the
   
   After you have select the build now button you will be able to see the a id in the build history upon selecting that you will view the below image in there you can view the console log output.
   
+  ![console](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_074.png?raw=true"console")
   
