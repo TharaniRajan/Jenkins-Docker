@@ -6,8 +6,8 @@
 # Content
 1. [Prerequisites](#prerequisites)
 1. [Jenkins](#jenkins-installation)
-1. [Dockerfile](#https://github.com/TharaniRajan/Jenkins-Docker/blob/master/Dockerfile)
-1. [Docker Compose file](#https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docker-compose.yml)
+1. [Dockerfile](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/Dockerfile)
+1. [Docker Compose file](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docker-compose.yml)
 
 # Prerequisites<br/> 
   [Install docker](https://docs.docker.com/install/)
