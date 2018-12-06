@@ -54,4 +54,8 @@ Once that is done you can give cat with the path name which you have seen in the
   
   After this you can add the project floder inside the workspace from the docker container after you have added all needed code then you can select the build now button.
   
+  ![build](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Tooltip_073.png?raw=true"build")
+  
+  After you have select the build now button you will be able to see the a id in the build history upon selecting that you will view the below image in there you can view the console log output.
+  
   
