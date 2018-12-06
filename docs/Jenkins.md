@@ -24,13 +24,16 @@
             
 Once you have opened the browser with the port number 8080 you will see the below screen which ask for password.
 
+   ![browser](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_066.png?raw=true"browser")
 
 To get that you need to into the jenkins container by using the command
 
         docker exec -ti jenkins1 bash
         
-Once that is done you can give cat with the path name which you have seen in the screen wheich will show you the password just copy paste it to the text box and you will be able to get inside the jenkins.
+Once that is done you can give cat with the path name which you have seen in the screen which will show you the password just copy paste it to the text box and you will be able to get inside the jenkins.
 
   Where you will see below screen without any jobs or pipelines.
+  
+  
   
   Now you can start creating a free style job and add the necessary detials in the 
