@@ -15,7 +15,7 @@
 # Jenkins Installation
   The Jenkins Continuous Integration and Delivery server.
   
-  ### Setting up Jekins:<br/>
+### Setting up Jekins:<br/>
    To run Jekins in docker first you have download the Jenkins image from the docker hub by giving this command
    
             docker run -d -p 8080:8080 --name jenkins1 jenkins/jenkins:lts
