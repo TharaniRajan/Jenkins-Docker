@@ -18,7 +18,7 @@
 ### Setting up Jekins:<br/>
    To run Jekins in docker first you have download the Jenkins image from the docker hub by giving this command
    
-            docker run -d -p 8080:8080 --name jenkins1 jenkins/jenkins:lts
+            docker run --name jenkins_containers -d -p 8877:8080 -p 50000:50000 --mount source=jenkins_backup_data,target=/var/jenkins_home --mount source=jenkins_backup_log,target=/var/log/jenkins jenkins/jenkins:lts
             
    Before that make sure that you dont have anything running in the port 8080 or you can use any port number of your convient.
  After you have pulled the nexus image check what the status of the container by giving this command.
