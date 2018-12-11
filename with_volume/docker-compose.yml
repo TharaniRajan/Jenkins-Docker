@@ -1,0 +1,19 @@
+version: '3'
+services:
+ master:
+   build: .
+   container_name: jenkins_container
+   ports:
+    - 8766:8080
+    - 50000:50000
+   volumes:
+    - jenkins_backup_log:/var/log/jenkins
+    - jenkins_backup_data:/var/jenkins_home
+   networks:
+    - jenkins_net
+
+volumes:
+ jenkins_backup_log:
+ jenkins_backup_data:
+networks:
+ jenkins_net:
