@@ -1,7 +1,7 @@
 ![Logo](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/GeppettoIcon.png?raw=true"Logo")
 
-# Docker With Jenkins<br/>
-   In here we will see how to containerize Jenkins in Docker with the volumes so that the job which you have created won't be lost even if the container is deleted or crashed.
+# Jenkins With Kubernetes<br/>
+   In here we will see how to containerized Jenkins is setuped on Top of a Kubernetes Cluster.
 
 # Content
 1. [Prerequisites](#prerequisites)
