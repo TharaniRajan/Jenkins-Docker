@@ -65,5 +65,25 @@
      $ minikube dashboard
   you can able to see browser opens with the minikube Kubernetes Dashboard with Jenkins Pod.  
   
+  ![Image1](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_069.png?raw=true"Image1")
+  
  
+ Now to open the Jenkins that is setuped using kubernetes
+  find the services in kubernetes using command:
+  
+     $ kubectl get service
+     
+   you will find the jenkins service that you have created, get the port number in which the service is running
+   
+   ![Image1](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_069.png?raw=true"Image1")
+   
+ Next to get IP of the Kubernetes cluster using:
+ 
+      $ minikube ip
+ 
+ Thats it! now you got the IP and Port of the Kubernetes cluster in which the Jenkins is      running(example:http://192.168.99.100:30886):
+ If you open this in browser you will see the jenkins:
+                             
+   ![Image1](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_069.png?raw=true"Image1")
+  
   
