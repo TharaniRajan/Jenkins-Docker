@@ -5,61 +5,43 @@
 
 # Content
 1. [Prerequisites](#prerequisites)
-1. [Jenkins](#jenkins-installation)
+1. [Kubernetes Setup](#kubernetes-setup)
 1. [Dockerfile](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/Dockerfile)
 1. [Docker Compose file](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docker-compose.yml)
 
 # Prerequisites<br/> 
-  [Install docker](https://docs.docker.com/install/)
+  [Docker](https://docs.docker.com/install/)
+  [Virtual Machine](https://www.virtualbox.org/wiki/Downloads)
+  [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
+  [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
   
-# Jenkins Installation
-  The Jenkins Continuous Integration and Delivery server.
   
-### Setting up Jekins:<br/>
-   To run Jekins in docker first you have download the Jenkins image from the docker hub by giving this command
+# Kubernetes Setup
+  The Kubernetes is an open source containers orchestration tool,i.e ability to deploy, scale, and operate with multiple containers from one place.
+  
+### Setting up Kubernetes:<br/>
+  To run Kubernetes first you need to setup a VM usng the following command
    
-            docker run --name jenkins_containers -d -p 8877:8080 -p 50000:50000 --mount source=jenkins_backup_data,target=/var/jenkins_home --mount source=jenkins_backup_log,target=/var/log/jenkins jenkins/jenkins:lts
+            $ sudo apt install virtualbox virtualbox-ext-pack 
             
-   Before that make sure that you dont have anything running in the port 8080 or you can use any port number of your convient.
- After you have pulled the nexus image check what the status of the container by giving this command.
+  After this need to install Minikube which runs Kubernetes in your local machine.
  
-            docker ps -a
+            $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.31.0/minikube-linux-amd64 && chmod +x  minikube && sudo cp minikube /usr/local/bin/ && rm minikube
+            $ minikube start
             
-Once you have opened the browser with the port number 8080 you will see the below screen which ask for password.
+ Once your setuped with minikube need to install kubectl which is the Kubernetes CLI:
 
-   ![browser](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_066.png?raw=true"browser")
+    $ sudo apt-get update && sudo apt-get install -y apt-transport-https
+    $ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+    $ echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+    $ sudo apt-get update
+    $ sudo apt-get install -y kubectl
 
-To get that you need to into the jenkins container by using the command
+ Thats it! Now you have setuped Kubernetes.
 
-        docker exec -ti jenkins1 bash
-        
-Once that is done you can give cat with the path name which you have seen in the screen which will show you the password just copy paste it to the text box and you will be able to get inside the jenkins.
-
-  Where you will see below screen without any jobs or pipelines.
+   
   
-  ![Login](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_067.png?raw=true"Login")
   
-  Now you can start creating a free style job 
-  
-  ![freestyle](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_068.png?raw=true"freestyle")
-  
-  And select the neccessary options like whether you want to deploy your application from github or by writing the a script file you can add the code inside the script tag.
-  
-  ![Image1](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_069.png?raw=true"Image1")
-  
-  ![Image2](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_070.png?raw=true"Image2")
-  
-  ![Image3](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_071.png?raw=true"Image3")
-  
-  Once all this is done you will see the created project as in the below screen.
-  
-  ![project](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_072.png?raw=true"project")
-  
-  After this you can add the project floder inside the workspace from the docker container after you have added all needed code then you can select the build now button.
-  
-  ![build](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Tooltip_073.png?raw=true"build")
-  
-  After you have select the build now button you will be able to see the a id in the build history upon selecting that you will view the below image in there you can view the console log output.
   
   ![console](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_074.png?raw=true"console")
   
