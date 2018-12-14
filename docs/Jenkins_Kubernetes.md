@@ -7,7 +7,6 @@
 1. [Prerequisites](#prerequisites)
 1. [Kubernetes Setup](#kubernetes-setup)
 1. [Jenkins](#jenkins-setup)
-1. [Docker Compose file](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docker-compose.yml)
 
 # Prerequisites<br/> 
   [Docker](https://docs.docker.com/install/) <br/> 
