@@ -6,14 +6,14 @@
 # Content
 1. [Prerequisites](#prerequisites)
 1. [Kubernetes Setup](#kubernetes-setup)
-1. [Dockerfile](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/Dockerfile)
+1. [Jenkins](#jenkins-setup)
 1. [Docker Compose file](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docker-compose.yml)
 
 # Prerequisites<br/> 
-  [Docker](https://docs.docker.com/install/)
-  [Virtual Machine](https://www.virtualbox.org/wiki/Downloads)
-  [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
-  [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+  [Docker](https://docs.docker.com/install/) <br/> 
+  [Virtual Machine](https://www.virtualbox.org/wiki/Downloads) <br/> 
+  [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) <br/> 
+  [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/) <br/> 
   
   
 # Kubernetes Setup
@@ -22,12 +22,12 @@
 ### Setting up Kubernetes:<br/>
   To run Kubernetes first you need to setup a VM usng the following command
    
-            $ sudo apt install virtualbox virtualbox-ext-pack 
+    $ sudo apt install virtualbox virtualbox-ext-pack 
             
   After this need to install Minikube which runs Kubernetes in your local machine.
  
-            $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.31.0/minikube-linux-amd64 && chmod +x  minikube && sudo cp minikube /usr/local/bin/ && rm minikube
-            $ minikube start
+    $ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.31.0/minikube-linux-amd64 && chmod +x  minikube && sudo cp minikube /usr/local/bin/ && rm minikube
+    $ minikube start
             
  Once your setuped with minikube need to install kubectl which is the Kubernetes CLI:
 
@@ -39,9 +39,31 @@
 
  Thats it! Now you have setuped Kubernetes.
 
+ 
+ # Jenkins Setup<br/>
+   Create a [Dockerfile](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/jenkins_Kubernetes/Dockerfile) for jenkins and build the image.The first command enters the into the minikube VM.
    
+    $ eval $(minikube docker-env)
+    $ docker build -t gep/my-jenkins-image:1.0 .
+    
+  As we already have the Kubernetes cluster in place and the Jenkins image, you can deploy this image on top of the cluster
   
+  Kubernetes deployment is presented in a YAML format text file with all the configuration params that might be needed to run   your application.
   
+  Create a [jenkins-deployment.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/jenkins_Kubernetes/jenkins-deployment.yaml) file, Let’s install the just created deployment into our Kubernetes cluster by using the specified command:
   
-  ![console](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_074.png?raw=true"console")
+     $ kubectl apply -f jenkins-deployment.yaml
+     
+  In addition to pod creation via deployment, we need to create the Jenkins service. The reason behind this is simple. To       interact with a pod inside the Kubernetes cluster   
+  
+  Create a [jenkins-service.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/jenkins_Kubernetes/jenkins-service.yaml) file,  you can run it inside the Kubernetes container by using this command:
+      
+     $ kubectl create -f jenkins-service.yaml
+     
+  Now we can open the Minikube Dashboard using:
+     
+     $ minikube dashboard
+  you can able to see browser opens with the minikube Kubernetes Dashboard with Jenkins Pod.  
+  
+ 
   
