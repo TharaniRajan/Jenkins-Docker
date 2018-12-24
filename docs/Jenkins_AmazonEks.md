@@ -1,12 +1,12 @@
 ![Logo](https://github.com/mithunvikram/nginx-docker/blob/master/docs/GeppettoIcon.png?raw=true"Logo")
 
-# Nginx with Amazon Eks<br/>
+# Jenkins with Amazon Eks<br/>
    In here we will see how to containerized Nginx is setup on Top of a Kubernetes Cluster.
    
 # Content
 1. [Prerequisites](#prerequisites)
 1. [Kubernetes Setup](#kubernetes-setup)
-1. [Nginx](#nginx-setup)
+1. [Jenkins](#jenkins-setup)
 
 # Prerequisites
 1. [Docker](https://docs.docker.com/install/)<br/>
@@ -155,22 +155,22 @@ To launch your worker nodes
       kubectl get nodes --watch
       
       
-# Nginx with Amazon Eks
+# Jenkins with Amazon Eks
   
-   Make sure you have pushed your docker image of nginx with your app in Docker hub.Login to your ec2 instance with pem file through ssh.
-    Create a [nginx-deployment.yaml](https://github.com/mithunvikram/nginx-docker/blob/master/docs/nginx-deployment.yaml) file, Let’s install the just created deployment into our Kubernetes cluster by using the specified command:
+   Make sure you have pushed your docker image of jenkins with your app in Docker hub.Login to your ec2 instance with pem file through ssh.
+    Create a [jenkins-deployment.yaml](https://github.com/mithunvikram/nginx-docker/blob/master/docs/nginx-deployment.yaml) file, Let’s install the just created deployment into our Kubernetes cluster by using the specified command:
   
-     $ kubectl apply -f nginx-deployment.yaml
+     $ kubectl apply -f jenkins-deployment.yaml
      
   In addition to pod creation via deployment, we need to create the Nginx service. The reason behind this is simple. To       interact with a pod inside the Kubernetes cluster   
   
   Create a [nginx-service.yaml](https://github.com/mithunvikram/nginx-docker/blob/master/docs/nginx-service.yaml) file,  you can run it inside the Kubernetes container by using this command:
       
-     $ kubectl apply -f nginx-service.yaml
+     $ kubectl apply -f jenkins-service.yaml
      
  Query the services in your cluster and wait until the External IP column for the nginx service is populated.
 
      $ kubectl get services -o wide
 
-After your external IP address is available, point a web browser to that address at port 80 to view your nginx. For example, http://a7a95c2b9e69711e7b1a3022fdcfdf2e-1985673473.us-west-2.elb.amazonaws.com:80
+After your external IP address is available, point a web browser to that address at port 8080 to view your nginx. For example, http://a7a95c2b9e69711e7b1a3022fdcfdf2e-1985673473.us-west-2.elb.amazonaws.com:8080
 
