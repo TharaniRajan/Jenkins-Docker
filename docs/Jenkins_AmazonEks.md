@@ -164,11 +164,11 @@ To launch your worker nodes
      
   In addition to pod creation via deployment, we need to create the Nginx service. The reason behind this is simple. To       interact with a pod inside the Kubernetes cluster   
   
-  Create a [nginx-service.yaml](https://github.com/mithunvikram/nginx-docker/blob/master/docs/nginx-service.yaml) file,  you can run it inside the Kubernetes container by using this command:
+  Create a [jenkins-service.yaml](https://github.com/mithunvikram/nginx-docker/blob/master/docs/nginx-service.yaml) file,  you can run it inside the Kubernetes container by using this command:
       
      $ kubectl apply -f jenkins-service.yaml
      
- Query the services in your cluster and wait until the External IP column for the nginx service is populated.
+ Query the services in your cluster and wait until the External IP column for the jenkins service is populated.
 
      $ kubectl get services -o wide
 
