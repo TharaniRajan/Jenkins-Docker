@@ -5,7 +5,7 @@
    
 # Content
 1. [Prerequisites](#prerequisites)
-1. [Kubernetes Setup in AWS](#kubernetes-setup)
+1. [Kubernetes Setup in AWS](#kubernetes-setup-in-aws)
 1. [Jenkins in Amazon EKS Cluster](#jenkins-in-amazon-eks-cluster)
 
 # Prerequisites
@@ -13,6 +13,7 @@
 1. [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/)<br/>
 1. [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)<br/>
 
+# Kubernetes setup in AWS
 
 # Follow the steps in this link to create Amazon EKS Service role and AWS config,
  
