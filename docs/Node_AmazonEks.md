@@ -20,13 +20,13 @@
  
   Kubernetes deployment is presented in a YAML format text file with all the configuration params that might be needed to run   your application.
   
-  Create a [mongo-deployment.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/jenkins_Kubernetes/jenkins-deployment.yaml) file, Let’s install the just created deployment into our Kubernetes cluster by using the specified command:
+  Create a [mongo-deployment.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/node_mongo_eks/mongo-deployment.yaml) file, Let’s install the just created deployment into our Kubernetes cluster by using the specified command:
   
      $ kubectl apply -f mongo-deployment.yaml
      
   In addition to pod creation via deployment, we need to create the Mongo service. The reason behind this is simple. To       interact with a pod inside the Kubernetes cluster   
   
-  Create a [mongo-service.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/jenkins_Kubernetes/jenkins-service.yaml) file,  you can run it inside the Kubernetes container by using this command:
+  Create a [mongo-service.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/node_mongo_eks/mongo-service.yaml) file,  you can run it inside the Kubernetes container by using this command:
       
      $ kubectl apply -f mongo-service.yaml
  
