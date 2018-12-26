@@ -11,7 +11,7 @@
 # Prerequisites<br/> 
   [Docker](https://docs.docker.com/install/) <br/> 
   [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/) <br/> 
-  [AWS CLI]
+  [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)<br/>
   
   Make sure that you have kubernetes with Amazon Eks is ready to use.If not,use the previous document to setup the Amazon Eks. 
   
