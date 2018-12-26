@@ -1,0 +1,24 @@
+piVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: gep-poc-tha-container
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+	app: gep-poc-tha-app
+    spec:
+      containers:
+      - name: node-container
+          imagePullPolicy: Always
+          image: tharanirajan/gep-poc-tha-node-app:2.0
+          ports:
+            - name: http-port
+              containerPort: 3000
+          env:
+            - name: mongo
+              value: mongo
+      volumes:
+	- name: jenkins-home
+          emptyDir: {}
