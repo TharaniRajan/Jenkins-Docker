@@ -7,7 +7,7 @@ spec:
   template:
     metadata:
       labels:
-	app: gep-poc-tha-app
+      	app: gep-poc-tha-app
     spec:
       containers:
       - name: node-container
