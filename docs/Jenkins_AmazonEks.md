@@ -165,13 +165,13 @@ To launch your worker nodes
 # Jenkins in Amazon Eks Cluster
   
    Make sure you have pushed your docker image of jenkins with your app in Docker hub.Login to your ec2 instance with pem file through ssh.
-    Create a [jenkins-deployment.yaml]() file, Let’s install the just created deployment into our Kubernetes cluster by using the specified command:
+    Create a [jenkins-deployment.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/jenkins_eks/jenkins-service.yaml) file, Let’s install the just created deployment into our Kubernetes cluster by using the specified command:
   
      $ kubectl apply -f jenkins-deployment.yaml
      
   In addition to pod creation via deployment, we need to create the Nginx service. The reason behind this is simple. To       interact with a pod inside the Kubernetes cluster   
   
-  Create a [jenkins-service.yaml]() file,  you can run it inside the Kubernetes container by using this command:
+  Create a [jenkins-service.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/jenkins_eks/jenkins-service.yaml) file,  you can run it inside the Kubernetes container by using this command:
       
      $ kubectl apply -f jenkins-service.yaml
      
