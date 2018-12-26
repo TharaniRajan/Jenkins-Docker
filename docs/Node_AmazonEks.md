@@ -18,6 +18,12 @@
   
  # Mongo with Amazon Eks
  
+  Create a persistent volumes to avoid dataloss that hapens because of container's dead or stop.
+ 
+  To set up the persistent volume,create a [mongo-persistentvolume.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/node_mongo_eks/mongo-persistentvolume.yaml) file)
+ 
+     $ kubectl apply -f mongo-persistentvolume.yaml
+ 
   Kubernetes deployment is presented in a YAML format text file with all the configuration params that might be needed to run   your application.
   
   Create a [mongo-deployment.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/node_mongo_eks/mongo-deployment.yaml) file, Let’s install the just created deployment into our Kubernetes cluster by using the specified command:
@@ -29,11 +35,7 @@
   Create a [mongo-service.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/node_mongo_eks/mongo-service.yaml) file,  you can run it inside the Kubernetes container by using this command:
       
      $ kubectl apply -f mongo-service.yaml
-      
- To set up the persistent volume,create a [mongo-persistentvolume.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/node_mongo_eks/mongo-persistentvolume.yaml) file)
- 
-     $ kubectl apply -f mongo-persistentvolume.yaml
-     
+         
  # Node with Amazon Eks 
  
   Create a [node-deployment.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/node_mongo_eks/node-deployment.yaml) file, Let’s install the just created deployment into our Kubernetes cluster by using the specified command:
