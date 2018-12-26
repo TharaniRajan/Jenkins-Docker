@@ -14,7 +14,7 @@
   [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) <br/> 
   [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/) <br/> 
   
-  Make sure that you have kubernetes wiht Amazon Eks is ready to use.If not,use the previous document to Setup.
+  Make sure that you have kubernetes with Amazon Eks is ready to use.If not,use the previous document to setup the Amazon Eks. 
   
  # Mongo with Amazon Eks
  
@@ -35,6 +35,10 @@
   Create a [mongo-service.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/node_mongo_eks/mongo-service.yaml) file,  you can run it inside the Kubernetes container by using this command:
       
      $ kubectl apply -f mongo-service.yaml
+     
+  To check the installation by using this commands,
+  
+     $ kubectl get service
          
  # Node with Amazon Eks 
  
@@ -47,4 +51,8 @@
   Create a [mongo-service.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/node_mongo_eks/node-service.yaml) file,  you can run it inside the Kubernetes container by using this command:
       
      $ kubectl apply -f node-service.yaml
+     
+  To check the installation by using this commands,
+  
+     $ kubectl get service
  
