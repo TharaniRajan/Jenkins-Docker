@@ -20,6 +20,6 @@ spec:
             - name: mongo
               mountPath: /data/db
       volumes:
-	- name: mongo
+        - name: mongo
           persistentVolumeClaim:
             claimName: mongo-data
