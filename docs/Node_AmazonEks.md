@@ -9,9 +9,9 @@
 1. [Node with Amazon Eks](#node-with-amazon-eks)
 
 # Prerequisites<br/> 
-  [Docker](https://docs.docker.com/install/) <br/> 
-  [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/) <br/> 
-  [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)<br/>
+1. [Docker](https://docs.docker.com/install/) <br/> 
+1. [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/) <br/> 
+1. [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)<br/>
    
   
  # Mongo with Amazon Eks
