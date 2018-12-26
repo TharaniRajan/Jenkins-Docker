@@ -5,14 +5,13 @@
 
 # Content
 1. [Prerequisites](#prerequisites)
-1. [Kubernetes Setup](#kubernetes-setup)
-1. [Jenkins](#jenkins-setup)
+1. [Mongo with Amazon Eks](#mongo-with-amazon-eks)
+1. [Node with Amazon Eks](#node-with-amazon-eks)
 
 # Prerequisites<br/> 
   [Docker](https://docs.docker.com/install/) <br/> 
-  [Virtual Machine](https://www.virtualbox.org/wiki/Downloads) <br/> 
-  [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) <br/> 
   [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/) <br/> 
+  [AWS CLI]
   
   Make sure that you have kubernetes with Amazon Eks is ready to use.If not,use the previous document to setup the Amazon Eks. 
   
