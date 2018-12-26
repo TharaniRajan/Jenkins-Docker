@@ -165,7 +165,7 @@ To launch your worker nodes
 # Jenkins in Amazon Eks Cluster
   
    Make sure you have pushed your docker image of jenkins with your app in Docker hub.Login to your ec2 instance with pem file through ssh.
-    Create a [jenkins-deployment.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/jenkins_eks/jenkins-service.yaml) file, Let’s install the just created deployment into our Kubernetes cluster by using the specified command:
+    Create a [jenkins-deployment.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/jenkins_eks/jenkins-deployment.yaml) file, Let’s install the just created deployment into our Kubernetes cluster by using the specified command:
   
      $ kubectl apply -f jenkins-deployment.yaml
      
