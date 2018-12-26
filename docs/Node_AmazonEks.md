@@ -12,11 +12,12 @@
   [Docker](https://docs.docker.com/install/) <br/> 
   [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/) <br/> 
   [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)<br/>
-  
-  Make sure that you have kubernetes with Amazon Eks is ready to use.If not,use the previous document to setup the Amazon Eks. 
+   
   
  # Mongo with Amazon Eks
  
+  Make sure that you have kubernetes with Amazon Eks is ready to use.If not,use the previous document to setup the Amazon Eks.
+  
   Create a persistent volumes to avoid data loss that happens because of container's dead or stop.
  
   To set up the persistent volume,create a [mongo-persistentvolume.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/node_mongo_eks/mongo-persistentvolume.yaml) file.
