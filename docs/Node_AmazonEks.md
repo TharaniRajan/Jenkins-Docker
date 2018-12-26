@@ -14,6 +14,7 @@
   [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) <br/> 
   [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/) <br/> 
   
-  Make sure that you have installed Kubernetes in Amazon 
+  Make sure that you have Amazon Eks is ready.
   
- # Mongo with Amazon Eks with 
+ # Mongo with Amazon Eks
+ 
