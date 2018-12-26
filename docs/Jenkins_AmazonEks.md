@@ -181,3 +181,5 @@ To launch your worker nodes
 
 After your external IP address is available, point a web browser to that address at port 8080 to view your nginx. For example, http://a7a95c2b9e69711e7b1a3022fdcfdf2e-1985673473.us-west-2.elb.amazonaws.com:8080
 
+![Image1](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/docs/Selection_008.png?raw=true"Image1")
+
