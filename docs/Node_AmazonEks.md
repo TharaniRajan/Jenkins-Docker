@@ -20,7 +20,7 @@
  
   Create a persistent volumes to avoid data loss that happens because of container's dead or stop.
  
-  To set up the persistent volume,create a [mongo-persistentvolume.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/node_mongo_eks/mongo-persistentvolume.yaml)file.
+  To set up the persistent volume,create a [mongo-persistentvolume.yaml](https://github.com/TharaniRajan/Jenkins-Docker/blob/master/node_mongo_eks/mongo-persistentvolume.yaml) file.
  
      $ kubectl apply -f mongo-persistentvolume.yaml
  
